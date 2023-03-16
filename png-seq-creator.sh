@@ -12,7 +12,7 @@ for video in $(ls -p ./webcam/ | grep -v /); do
         # usando um intervalo de 0 a 30 frames e um tamanho máximo de 299 pixels,
         # e salva as imagens geradas no diretório de saída correspondente ao vídeo atual
         echo "Processando $video ..."
-        ./apps/png-seq-creator/png-seq-creator 0 30 299 ./webcam/$video ./imagens/$(basename "$video" .webm)/
+        ./apps/png-seq-creator/cuda-png-seq-creator 0 30 299 ./webcam/$video ./imagens/$(basename "$video" .webm)/
     fi
 done
 

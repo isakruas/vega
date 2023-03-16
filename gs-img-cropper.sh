@@ -13,6 +13,6 @@ for video in $(ls -p ./imagens/ | grep / | sed 's|/||g'); do
         fi
         # Processa a imagem atual usando o aplicativo "gs-img-cropper"
         # com um valor de 27 como argumento e salva a imagem processada no diretório de saída
-        ./apps/gs-img-cropper/gs-img-cropper 27 ./imagens/$video/$img ./imagens/$video/datasets/$(basename "$img" .png)/
+        ./apps/gs-img-cropper/gs-img-cropper 28 ./imagens/$video/$img ./imagens/$video/datasets/$(basename "$img" .png)/
     done
 done
